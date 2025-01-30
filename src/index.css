@@ -1,0 +1,537 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center; /* Center text and inline elements */
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #2980b9;
+  padding: 15px;
+  display: flex;
+  justify-content: center; /* Center navbar items */
+  margin-bottom: 20px; /* Space below the navbar */
+}
+
+.navbar-buttons {
+  display: flex; /* Use flexbox for button layout */
+  gap: 10px; /* Space between buttons */
+}
+
+.navbar-button {
+  background-color: #3498db; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Padding for buttons */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline from links */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar-button:hover {
+  background-color: #2980b9; /* Darker background on hover */
+}
+
+/* Home Container */
+.home-container {
+  padding: 20px;
+}
+
+/* Home Title */
+.home-title {
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+/* Home Image */
+.home-image {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: add rounded corners */
+  margin-top: 20px; /* Space above the image */
+}
+
+/* Additional Styles (if needed) */
+.page {
+  padding: 20px;
+}
+
+.department-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.department-list li {
+  background-color: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.dashboard-title {
+  margin-bottom: 10px;
+  color: #2c3e50; /* Darker color for title */
+}
+
+.dashboard-subtitle {
+  margin-bottom: 20px;
+  color: #7f8c8d; /* Lighter color for subtitle */
+}
+
+/* Statistics Section */
+.dashboard-stats {
+  display: grid; /* Use grid layout for cards */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background-color: white; /* Card background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside cards */
+  text-align: center; /* Center text */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.stat-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.stat-count {
+  font-size: 2em; /* Larger font for count */
+  color: #2980b9; /* Color for count */
+}
+
+/* Quick Actions Section */
+.quick-actions {
+  margin-top: 30px; /* Space above quick actions */
+}
+
+.actions-grid {
+  display: grid; /* Use grid layout for buttons */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 15px; /* Space between buttons */
+}
+
+.action-btn {
+  background-color: #3498db; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 15px; /* Padding for buttons */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.action-btn:hover {
+  background-color: #2980b9; /* Darker background on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+/* Doctors Styles */
+.doctors-container {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.doctors-title {
+  margin-bottom: 10px;
+  color: #2c3e50; /* Darker color for title */
+}
+
+.error-message {
+  color: red; /* Red color for error messages */
+  margin-bottom: 10px; /* Space below error message */
+}
+
+/* Doctor List Table */
+.doctors-table {
+  width: 100%;
+  border-collapse: collapse; /* Collapse borders */
+  margin-bottom: 20px; /* Space below table */
+}
+
+.doctors-table th, .doctors-table td {
+  padding: 10px; /* Padding for table cells */
+  text-align: left; /* Align text to the left */
+  border: 1px solid #ddd; /* Border for table cells */
+}
+
+.doctors-table th {
+  background-color: #2980b9; /* Header background color */
+  color: white; /* Header text color */
+}
+
+/* Add New Doctor Form */
+.add-doctor-form {
+  margin-top: 20px; /* Space above form */
+  background-color: white; /* Form background */
+  padding: 20px; /* Padding inside form */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.add-doctor-form input {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px; /* Padding for inputs */
+  margin: 10px 0; /* Margin for spacing */
+  border: 1px solid #ddd; /* Border for inputs */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.add-doctor-form button {
+  background-color: #3498db; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Padding for button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.add-doctor-form button:hover {
+  background-color: #2980b9; /* Darker background on hover */
+}
+/* Patients Styles */
+.patients-container {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.patients-title {
+  margin-bottom: 10px;
+  color: #2c3e50; /* Darker color for title */
+}
+
+.error-message {
+  color: red; /* Red color for error messages */
+  margin-bottom: 10px; /* Space below error message */
+}
+
+/* Patient List Table */
+.patients-table {
+  width: 100%;
+  border-collapse: collapse; /* Collapse borders */
+  margin-bottom: 20px; /* Space below table */
+}
+
+.patients-table th, .patients-table td {
+  padding: 10px; /* Padding for table cells */
+  text-align: left; /* Align text to the left */
+  border: 1px solid #ddd; /* Border for table cells */
+}
+
+.patients-table th {
+  background-color: #2980b9; /* Header background color */
+  color: white; /* Header text color */
+}
+
+/* Add New Patient Form */
+.add-patient-form {
+  margin-top: 20px; /* Space above form */
+  background-color: white; /* Form background */
+  padding: 20px; /* Padding inside form */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.add-patient-form input {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px; /* Padding for inputs */
+  margin: 10px 0; /* Margin for spacing */
+  border: 1px solid #ddd; /* Border for inputs */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.add-patient-form button {
+  background-color: #3498db; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Padding for button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.add-patient-form button:hover {
+  background-color: #2980b9; /* Darker background on hover */
+}
+/* Pharmacy Styles */
+.pharmacy-container {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.pharmacy-title {
+  margin-bottom: 10px;
+  color: #2c3e50; /* Darker color for title */
+}
+
+.error-message {
+  color: red; /* Red color for error messages */
+  margin-bottom: 10px; /* Space below error message */
+}
+
+/* Medicine Inventory Table */
+.pharmacy-table {
+  width: 100%;
+  border-collapse: collapse; /* Collapse borders */
+  margin-bottom: 20px; /* Space below table */
+}
+
+.pharmacy-table th, .pharmacy-table td {
+  padding: 10px; /* Padding for table cells */
+  text-align: left; /* Align text to the left */
+  border: 1px solid #ddd; /* Border for table cells */
+}
+
+.pharmacy-table th {
+  background-color: #2980b9; /* Header background color */
+  color: white; /* Header text color */
+}
+
+/* Add New Medicine Form */
+.add-medicine-form {
+  margin-top: 20px; /* Space above form */
+  background-color: white; /* Form background */
+  padding: 20px; /* Padding inside form */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.add-medicine-form input {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px; /* Padding for inputs */
+  margin: 10px 0; /* Margin for spacing */
+  border: 1px solid #ddd; /* Border for inputs */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.add-medicine-form button {
+  background-color: #3498db; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Padding for button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.add-medicine-form button:hover {
+  background-color: #2980b9; /* Darker background on hover */
+}
+/* Reports Styles */
+.reports-container {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.reports-title {
+  margin-bottom: 10px;
+  color: #2c3e50; /* Darker color for title */
+}
+
+.error-message {
+  color: red; /* Red color for error messages */
+  margin-bottom: 10px; /* Space below error message */
+}
+
+/* Reports Table */
+.reports-table {
+  width: 100%;
+  border-collapse: collapse; /* Collapse borders */
+  margin-bottom: 20px; /* Space below table */
+}
+
+.reports-table th, .reports-table td {
+  padding: 10px; /* Padding for table cells */
+  text-align: left; /* Align text to the left */
+  border: 1px solid #ddd; /* Border for table cells */
+}
+
+.reports-table th {
+  background-color: #2980b9; /* Header background color */
+  color: white; /* Header text color */
+}
+
+/* Add New Report Form */
+.add-report-form {
+  margin-top: 20px; /* Space above form */
+  background-color: white; /* Form background */
+  padding: 20px; /* Padding inside form */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.add-report-form input,
+.add-report-form select {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px; /* Padding for inputs */
+  margin: 10px 0; /* Margin for spacing */
+  border: 1px solid #ddd; /* Border for inputs */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.add-report-form button {
+  background-color: #3498db; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Padding for button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.add-report-form button:hover {
+  background-color: #2980b9; /* Darker background on hover */
+}
+/* Admin Panel Styles */
+.admin-panel-container {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.admin-title {
+  margin-bottom: 10px;
+  color: #2c3e50; /* Darker color for title */
+}
+
+.error-message {
+  color: red; /* Red color for error messages */
+  margin-bottom: 10px; /* Space below error message */
+}
+
+/* User Management Table */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse; /* Collapse borders */
+  margin-bottom: 20px; /* Space below table */
+}
+
+.admin-table th, .admin-table td {
+  padding: 10px; /* Padding for table cells */
+  text-align: left; /* Align text to the left */
+  border: 1px solid #ddd; /* Border for table cells */
+}
+
+.admin-table th {
+  background-color: #2980b9; /* Header background color */
+  color: white; /* Header text color */
+}
+
+/* Add New User Form */
+.add-user-form {
+  margin-top: 20px; /* Space above form */
+  background-color: white; /* Form background */
+  padding: 20px; /* Padding inside form */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.add-user-form input,
+.add-user-form select {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px; /* Padding for inputs */
+  margin: 10px 0; /* Margin for spacing */
+  border: 1px solid #ddd; /* Border for inputs */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.add-user-form button {
+  background-color: #3498db; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Padding for button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.add-user-form button:hover {
+  background-color: #2980b9; /* Darker background on hover */
+}
+
+/* Status Styles */
+.status-active {
+  color: green; /* Color for active status */
+}
+
+.status-inactive {
+  color: red; /* Color for inactive status */
+}
+/* Account Styles */
+.account-container {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h1 {
+  color: #2c3e50; /* Darker color for title */
+}
+
+.account-details {
+  margin-bottom: 20px; /* Space below account details */
+}
+
+label {
+  display: block; /* Block display for labels */
+  margin: 10px 0 5px; /* Margin for spacing */
+}
+
+.account-details input {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px; /* Padding for inputs */
+  margin-bottom: 10px; /* Space below inputs */
+  border: 1px solid #ddd; /* Border for inputs */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.account-details p {
+  margin: 10px 0; /* Margin for spacing */
+  color: #555; /* Color for text */
+}
+
+/* Action Buttons */
+.save-btn, .cancel-btn, .edit-btn {
+  background-color: #3498db; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Padding for button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+  margin-right: 10px; /* Space between buttons */
+}
+
+.save-btn:hover, .cancel-btn:hover, .edit-btn:hover {
+  background-color: #2980b9; /* Darker background on hover */
+}
