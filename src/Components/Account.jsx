@@ -1,5 +1,7 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
+import axios from "axios";
 
 const Account = () => {
   // Sample user account data
@@ -68,6 +70,7 @@ const Account = () => {
       ) : (
         <button className="edit-btn" onClick={toggleEdit}>Edit Account</button>
       )}
+
     </div>
   );
 };

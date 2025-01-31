@@ -1,6 +1,7 @@
-import React from "react";
-
-
+import React, { useState } from "react"; // Import useState
+import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
+import axios from "axios"; 
 const AdminPanel = () => {
   // Sample user data
   const [users, setUsers] = useState([
@@ -40,7 +41,6 @@ const AdminPanel = () => {
   return (
     <div className="admin-panel-container">
       <h1 className="admin-title">Admin Panel</h1>
-      
 
       {/* Error Message */}
       {error && <p className="error-message">{error}</p>}
@@ -93,6 +93,9 @@ const AdminPanel = () => {
         </select>
         <button onClick={addUser }>Add User</button>
       </div>
+      <Link to="/account">
+              <button className="next-button">Next</button>
+            </Link>
     </div>
   );
 };

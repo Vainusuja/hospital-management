@@ -1,8 +1,8 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios"; 
 
 const Reports = () => {
-  // Sample report data
   const [reports, setReports] = useState([
     { id: 1, title: "Monthly Patient Report", type: "Patient", date: "2024-01-01" },
     { id: 2, title: "Financial Overview", type: "Finance", date: "2024-01-10" },
@@ -10,38 +10,36 @@ const Reports = () => {
   ]);
 
   const [newReport, setNewReport] = useState({ title: "", type: "" });
-  const [error, setError] = useState(""); // State for error messages
+  const [error, setError] = useState(""); 
 
-  // Handle input change
   const handleChange = (e) => {
     setNewReport({ ...newReport, [e.target.name]: e.target.value });
   };
 
-  // Add a new report
   const addReport = () => {
     if (newReport.title && newReport.type) {
-      setReports([...reports, { id: reports.length + 1, ...newReport, date: new Date().toISOString().split("T")[0] }]);
+      setReports([
+        ...reports,
+        { id: reports.length + 1, ...newReport, date: new Date().toISOString().split("T")[0] },
+      ]);
       setNewReport({ title: "", type: "" });
-      setError(""); // Clear error message
+      setError(""); 
     } else {
-      setError("Please fill in all fields."); // Set error message
+      setError("Please fill in all fields."); 
     }
   };
 
-  // Simulate report download
   const downloadReport = (report) => {
     alert(`Downloading: ${report.title}`);
+    // Here you can implement the actual download logic, e.g., making an API call to fetch the report file.
   };
 
   return (
     <div className="reports-container">
       <h1 className="reports-title">Reports</h1>
-      
 
-      {/* Error Message */}
       {error && <p className="error-message">{error}</p>}
 
-      {/* Reports Table */}
       <table className="reports-table">
         <thead>
           <tr>
@@ -67,7 +65,6 @@ const Reports = () => {
         </tbody>
       </table>
 
-      {/* Add New Report Form */}
       <div className="add-report-form">
         <h2>Create New Report</h2>
         <input
@@ -86,6 +83,10 @@ const Reports = () => {
         </select>
         <button onClick={addReport}>Generate Report</button>
       </div>
+
+      <Link to="/adminpanel">
+        <button className="next-button">Next</button>
+      </Link>
     </div>
   );
 };

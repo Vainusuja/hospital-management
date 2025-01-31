@@ -1,24 +1,36 @@
-import React from "react";
-import { useHistory } from "react-router-dom"; // Import useHistory for navigation
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
+import axios from "axios"; 
+const slides = [
+  {
+    title: "Hospital Management System",
+    content: "Welcome to our Hospital Management System, designed to streamline hospital operations and improve patient care. Our system integrates patient information, doctor schedules, and pharmacy management into one seamless platform.",
+    image: "https://5.imimg.com/data5/ANDROID/Default/2022/8/KD/PG/OM/138582968/product-jpeg-500x500.jpg"
+  },
+];
 
 const Home = () => {
-  const history = useHistory(); // Initialize useHistory
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Function to handle login button click
-  const handleLogin = () => {
-    history.push("/login"); // Redirect to the login page
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
   };
 
   return (
     <div className="home-container">
-      <h1 className="home-title">Hospital Management System</h1>
-      <img 
-        src="https://5.imimg.com/data5/SELLER/Default/2024/11/465399076/ZI/BT/YE/1410239/online-hospital-software-500x500.jpg" 
-        alt="Hospital Management System" 
+      <Navbar />
+      <h1 className="home-title">{slides[currentSlide].title}</h1>
+      <img
+        src={slides[currentSlide].image}
+        alt={slides[currentSlide].title}
         className="home-image"
       />
-      <button className="login-button" onClick={handleLogin}>Login</button>
+      <p>{slides[currentSlide].content}</p>
+
+      <Link to="/dashboard">
+        <button className="next-button">Next</button>
+      </Link>
     </div>
   );
 };

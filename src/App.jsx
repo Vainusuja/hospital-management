@@ -1,35 +1,38 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Dashboard from './components/Dashboard';
-import Departments from './components/Departments';
-import Doctors from './components/Doctors';
-import Patients from './components/Patients';
-import Pharmacy from './components/Pharmacy';
-import Reports from './components/Reports';
-import AdminPanel from './components/AdminPanel';
+import React from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
-import Account from './components/Account';
+// Import your components
+import Account from './Components/Account';
+import AdminPanel from './Components/AdminPanel';
+import Dashboard from './Components/Dashboard';
+import Departments from './Components/Departments';
+import Doctors from './Components/Doctors';
+import Home from './Components/Home';
+import Navbar from './Components/Navbar';
+import Patients from './Components/Patients';
+import Pharmacy from './Components/Pharmacy';
+import Reports from './Components/Reports';
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/departments" element={<Departments />} />
-        <Route path="/doctors" element={<Doctors />} />
-        <Route path="/patients" element={<Patients />} />
-        <Route path="/pharmacy" element={<Pharmacy />} />
-        <Route path="/reports" element={<Reports />} />
-        <Route path="/admin" element={<AdminPanel />} />
-        
-        <Route path="/account" element={<Account />} />
-      </Routes>
-    </Router>
+    <BrowserRouter>
+      <div>
+        <Navbar />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/adminpanel" element={<AdminPanel />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/departments" element={<Departments />} />
+          <Route path="/doctors" element={<Doctors />} />
+          <Route path="/patients" element={<Patients />} />
+          <Route path="/pharmacy" element={<Pharmacy />} />
+          <Route path="/reports" element={<Reports />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;

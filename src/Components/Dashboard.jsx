@@ -1,5 +1,7 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
+import axios from "axios";
 
 const Dashboard = () => {
   // Sample statistics
@@ -26,17 +28,12 @@ const Dashboard = () => {
         ))}
       </div>
 
-      {/* Quick Actions */}
-      <div className="quick-actions">
-        <h2>Quick Actions</h2>
-        <div className="actions-grid">
-          <button className="action-btn">Add Patient</button>
-          <button className="action-btn">Schedule Appointment</button>
-          <button className="action-btn">Manage Doctors</button>
-          <button className="action-btn">View Reports</button>
-        </div>
+      
+        <Link to="/departments">
+                <button className="next-button">Next</button>
+              </Link>
       </div>
-    </div>
+    
   );
 };
 

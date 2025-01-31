@@ -1,43 +1,42 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Navbar from "./Navbar"; // Assuming you have a Navbar component
+import axios from "axios"; 
 
 const Pharmacy = () => {
-  // Sample pharmacy inventory
   const [medicines, setMedicines] = useState([
     { id: 1, name: "Paracetamol", category: "Pain Reliever", stock: 50, price: "$5" },
     { id: 2, name: "Amoxicillin", category: "Antibiotic", stock: 30, price: "$10" },
     { id: 3, name: "Metformin", category: "Diabetes", stock: 20, price: "$8" },
   ]);
 
-  // New medicine details
   const [newMedicine, setNewMedicine] = useState({ name: "", category: "", stock: "", price: "" });
-  const [error, setError] = useState(""); // State for error messages
+  const [error, setError] = useState(""); 
+  const [successMessage, setSuccessMessage] = useState("");
 
-  // Handle input change
   const handleChange = (e) => {
     setNewMedicine({ ...newMedicine, [e.target.name]: e.target.value });
   };
 
-  // Add new medicine to inventory
   const addMedicine = () => {
     if (newMedicine.name && newMedicine.category && newMedicine.stock && newMedicine.price) {
       setMedicines([...medicines, { id: medicines.length + 1, ...newMedicine }]);
       setNewMedicine({ name: "", category: "", stock: "", price: "" });
-      setError(""); // Clear error message
+      setError(""); 
+      setSuccessMessage("Medicine added successfully!");
+      setTimeout(() => setSuccessMessage(""), 3000); // Clear success message after 3 seconds
     } else {
-      setError("Please fill in all fields."); // Set error message
+      setError("Please fill in all fields."); 
     }
   };
 
   return (
     <div className="pharmacy-container">
       <h1 className="pharmacy-title">Pharmacy</h1>
-      
 
-      {/* Error Message */}
       {error && <p className="error-message">{error}</p>}
+      {successMessage && <p className="success-message">{successMessage}</p>}
 
-      {/* Medicine Inventory Table */}
       <table className="pharmacy-table">
         <thead>
           <tr>
@@ -61,7 +60,6 @@ const Pharmacy = () => {
         </tbody>
       </table>
 
-      {/* Add New Medicine Form */}
       <div className="add-medicine-form">
         <h2>Add New Medicine</h2>
         <input
@@ -94,6 +92,10 @@ const Pharmacy = () => {
         />
         <button onClick={addMedicine}>Add Medicine</button>
       </div>
+
+      <Link to="/reports">
+        <button className="next-button">Next</button>
+      </Link>
     </div>
   );
 };

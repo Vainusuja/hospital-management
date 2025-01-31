@@ -1,5 +1,7 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
+import axios from "axios";
 
 const Patients = () => {
   // Sample patient data
@@ -33,7 +35,6 @@ const Patients = () => {
     <div className="patients-container">
       <h1 className="patients-title">Patients</h1>
       
-
       {/* Error Message */}
       {error && <p className="error-message">{error}</p>}
 
@@ -92,8 +93,12 @@ const Patients = () => {
           value={newPatient.contact}
           onChange={handleChange}
         />
-        <button onClick={addPatient}>Add Patient</button>
+        <button onClick={addPatient} className="add-patient-btn">Add Patient</button>
       </div>
+
+      <Link to="/pharmacy">
+        <button className="next-button">Next</button>
+      </Link>
     </div>
   );
 };

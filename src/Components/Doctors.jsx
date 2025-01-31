@@ -1,5 +1,7 @@
-import React from "react";
-
+import React, { useState } from "react"; // Add useState import here
+import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
+import axios from "axios";
 
 const Doctors = () => {
   // Sample doctor data
@@ -85,6 +87,9 @@ const Doctors = () => {
         />
         <button onClick={addDoctor}>Add Doctor</button>
       </div>
+      <Link to="/patients">
+        <button className="next-button">Next</button>
+      </Link>
     </div>
   );
 };
